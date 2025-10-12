@@ -1,7 +1,7 @@
-/* ======== Allgemeines Design ======== */
+/* ===== Allgemein ===== */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #000000; /* Standardtext = Schwarz */
+  color: #000000;
   background-color: #f8f9fa;
   margin: 0;
   line-height: 1.6;
@@ -15,48 +15,55 @@ p, li, a {
   font-size: 1rem;
 }
 
-/* ======== Header ======== */
+/* ===== HEADER ===== */
 header {
   background-color: #88b552; /* Logo-Grün */
-  text-align: center;
-  padding: 2em 1em;
-  position: relative;
+  color: #000000;
 }
 
-header .logo {
-  max-width: 150px;
-  height: auto;
-  display: block;
-  margin: 0 auto 0.5em auto;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.header-text {
+  text-align: left;
 }
 
 header h1 {
-  font-size: 2.2em;
   color: #000000; /* Schwarz */
-  margin: 0.3em 0 0.2em 0;
+  margin: 0;
+  font-size: 2.2em;
 }
 
 header h2 {
-  font-size: 1.2em;
   color: #4f4c4c; /* Grau */
+  margin: 0.2em 0 0.8em 0;
   font-weight: 400;
-  margin: 0 0 1em 0;
 }
 
-/* ======== Navigation ======== */
+.header-logo .logo {
+  max-width: 150px;
+  height: auto;
+}
+
 nav a {
-  color: #000000; /* Schwarz */
+  color: #000000;
   text-decoration: none;
-  margin: 0 1em;
+  margin-right: 1em;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #4f4c4c; /* Grau beim Hover */
+  color: #4f4c4c;
 }
 
-/* ======== Hauptinhalt ======== */
+/* ===== MAIN / SECTIONS ===== */
 main {
   max-width: 800px;
   margin: 2em auto;
@@ -75,31 +82,34 @@ section h2 {
   padding-bottom: 0.3em;
 }
 
-ul {
-  padding-left: 1.2em;
-}
-
-ul li {
-  margin-bottom: 0.5em;
-}
-
-/* ======== Kontaktbereich ======== */
+/* ===== KONTAKT ===== */
 #kontakt p, #kontakt a {
   font-size: 1.05rem;
 }
 
-#kontakt i {
+.kontakt-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5em;
+}
+
+.kontakt-links li {
+  margin: 0.6em 0;
+  font-size: 1.1rem;
+}
+
+.kontakt-links i {
   margin-right: 8px;
   vertical-align: middle;
 }
 
-/* Icons einfärben: */
+/* Icons einfärben passend zum Logo */
 #kontakt i.fa-envelope { color: #000000; }   /* Mail = Schwarz */
 #kontakt i.fa-phone { color: #4f4c4c; }      /* Telefon = Grau */
 #kontakt i.fa-whatsapp { color: #88b552; }   /* WhatsApp = Grün */
 
 #kontakt a {
-  color: inherit; /* Linkfarbe übernimmt Iconfarbe */
+  color: inherit;
   text-decoration: none;
 }
 
@@ -107,11 +117,10 @@ ul li {
   text-decoration: underline;
 }
 
-/* ======== Formular ======== */
+/* Formular */
 form {
   display: flex;
   flex-direction: column;
-  margin-top: 1em;
 }
 
 form label {
@@ -128,7 +137,7 @@ form input, form textarea, form button {
 }
 
 form button {
-  background-color: #88b552; /* Logo-Grün */
+  background-color: #88b552; /* Grün */
   color: white;
   font-weight: 600;
   border: none;
@@ -141,7 +150,7 @@ form button:hover {
   background-color: #6a8b3e; /* dunkleres Grün */
 }
 
-/* ======== Footer ======== */
+/* ===== FOOTER ===== */
 footer {
   background-color: #4f4c4c; /* Grau */
   color: white;
@@ -151,7 +160,7 @@ footer {
 }
 
 footer a {
-  color: #88b552; /* Grün links im Footer */
+  color: #88b552; /* Grün */
   text-decoration: none;
 }
 
@@ -159,19 +168,30 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ======== Responsive ======== */
-@media (max-width: 600px) {
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
   nav a {
     display: block;
     margin: 0.4em 0;
   }
 
-  header h1 {
-    font-size: 2em;
+  .header-logo {
+    margin-top: 1em;
   }
+}
 
+@media (max-width: 600px) {
   main {
     margin: 1em;
     padding: 1em;
+  }
+
+  header h1 {
+    font-size: 2em;
   }
 }
