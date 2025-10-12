@@ -1,14 +1,30 @@
+/* ======== Allgemeines Design ======== */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #000000; /* Standardtext = Schwarz */
+  background-color: #f8f9fa;
+  margin: 0;
+  line-height: 1.6;
+}
 
+h1, h2 {
+  margin-bottom: 0.4em;
+}
+
+p, li, a {
+  font-size: 1rem;
+}
+
+/* ======== Header ======== */
 header {
-  background: #88b552; 
-  color: #000000; 
+  background-color: #88b552; /* Logo-Grün */
   text-align: center;
   padding: 2em 1em;
   position: relative;
 }
 
 header .logo {
-  max-width: 150px; 
+  max-width: 150px;
   height: auto;
   display: block;
   margin: 0 auto 0.5em auto;
@@ -16,25 +32,146 @@ header .logo {
 
 header h1 {
   font-size: 2.2em;
-  color: #000000; 
+  color: #000000; /* Schwarz */
   margin: 0.3em 0 0.2em 0;
 }
 
 header h2 {
   font-size: 1.2em;
-  color: #4f4c4c; 
+  color: #4f4c4c; /* Grau */
   font-weight: 400;
   margin: 0 0 1em 0;
 }
 
-
+/* ======== Navigation ======== */
 nav a {
-  color: #000000; 
+  color: #000000; /* Schwarz */
   text-decoration: none;
   margin: 0 1em;
   font-weight: 500;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #4f4c4c; 
+  color: #4f4c4c; /* Grau beim Hover */
+}
+
+/* ======== Hauptinhalt ======== */
+main {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 0 1em;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+section h2 {
+  border-bottom: 2px solid #88b552;
+  padding-bottom: 0.3em;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+/* ======== Kontaktbereich ======== */
+#kontakt p, #kontakt a {
+  font-size: 1.05rem;
+}
+
+#kontakt i {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Icons einfärben: */
+#kontakt i.fa-envelope { color: #000000; }   /* Mail = Schwarz */
+#kontakt i.fa-phone { color: #4f4c4c; }      /* Telefon = Grau */
+#kontakt i.fa-whatsapp { color: #88b552; }   /* WhatsApp = Grün */
+
+#kontakt a {
+  color: inherit; /* Linkfarbe übernimmt Iconfarbe */
+  text-decoration: none;
+}
+
+#kontakt a:hover {
+  text-decoration: underline;
+}
+
+/* ======== Formular ======== */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+form label {
+  margin-top: 0.5em;
+}
+
+form input, form textarea, form button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6em;
+  margin-top: 0.3em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  background-color: #88b552; /* Logo-Grün */
+  color: white;
+  font-weight: 600;
+  border: none;
+  margin-top: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #6a8b3e; /* dunkleres Grün */
+}
+
+/* ======== Footer ======== */
+footer {
+  background-color: #4f4c4c; /* Grau */
+  color: white;
+  text-align: center;
+  padding: 1.5em 1em;
+  margin-top: 2em;
+}
+
+footer a {
+  color: #88b552; /* Grün links im Footer */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 0.4em 0;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  main {
+    margin: 1em;
+    padding: 1em;
+  }
 }
