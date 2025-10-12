@@ -1,119 +1,68 @@
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #000000;
-  background-color: #f8f9fa;
-  margin: 0;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SchoEnergy Energieberatung</title>
 
-h1, h2 { margin-bottom: 0.4em; }
-p, li, a { font-size: 1rem; }
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
 
-/* Navigation */
-nav {
-  background-color: #88b552;
-  text-align: center;
-  padding: 1em 0;
-}
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <a href="#ueber">Über mich</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
 
-nav a {
-  color: #000000;
-  text-decoration: none;
-  margin: 0 1em;
-  font-weight: 500;
-  transition: color 0.3s;
-}
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>SchoEnergy</h1>
+        <h2>Ihr Energieeffizienz-Experte aus dem Sauerland</h2>
+      </div>
+      <div class="hero-logo">
+        <img src="bilder/logo.svg" alt="SchoEnergy Logo">
+      </div>
+    </div>
+  </header>
 
-nav a:hover { color: #4f4c4c; }
+  <!-- MAIN -->
+  <main>
+    <section id="ueber" class="box">
+      <h2>Über mich</h2>
+      <p>SchoEnergy Energieberatung – Ihr Energieeffizienz-Experte aus dem Sauerland. Ich unterstütze Sie bei allen Fragen rund um Energieeinsparung, Energieausweise und nachhaltige Gebäudetechnik.</p>
+    </section>
 
-/* Header / Hero */
-header {
-  background-color: #88b552;
-  padding: 2em 1em;
-  position: relative;
-}
+    <section id="leistungen" class="box">
+      <h2>Leistungen</h2>
+      <ul>
+        <li>Energieberatung für Privathaushalte</li>
+        <li>Erstellung von Energieausweisen</li>
+        <li>Wärmebildaufnahmen</li>
+      </ul>
+    </section>
 
-.hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
-  flex-wrap: wrap;
-  position: relative;
-}
+    <section id="kontakt" class="box">
+      <h2>Kontakt</h2>
+      <p>Schreib mir gerne eine Nachricht oder rufe mich direkt an:</p>
+      <ul>
+        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@schoenergy.de">info@schoenergy.de</a></li>
+        <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/491605724496" target="_blank">WhatsApp-Nachricht senden</a></li>
+        <li><i class="fa-solid fa-phone"></i> <a href="tel:+491605724496">+49 160 5724496</a></li>
+      </ul>
+    </section>
+  </main>
 
-.hero-text {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 1.5em 2em;
-  border-radius: 12px;
-  text-align: center;
-  max-width: 600px;
-  position: relative;
-  z-index: 1;
-}
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 SchoEnergy</p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
 
-.hero-text h1 { color: #000000; font-size: 2.2em; margin-bottom: 0.3em; }
-.hero-text h2 { color: #4f4c4c; font-weight: 400; font-size: 1.2em; }
-
-.hero-logo img {
-  max-width: 120px;
-  height: auto;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-/* Main-Bereiche als Kästchen */
-.box {
-  max-width: 800px;
-  margin: 2em auto;
-  padding: 1.5em 2em;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-section h2 {
-  border-bottom: 2px solid #88b552;
-  padding-bottom: 0.3em;
-}
-
-ul { padding-left: 1.2em; }
-ul li { margin-bottom: 0.5em; }
-
-/* Kontaktbereich */
-#kontakt p, #kontakt a { font-size: 1.05rem; }
-#kontakt i { margin-right: 8px; vertical-align: middle; }
-
-#kontakt i.fa-envelope { color: #000000; }
-#kontakt i.fa-phone { color: #4f4c4c; }
-#kontakt i.fa-whatsapp { color: #88b552; }
-
-#kontakt a { color: inherit; text-decoration: none; }
-#kontakt a:hover { text-decoration: underline; }
-
-/* Footer */
-footer {
-  background-color: #4f4c4c;
-  color: white;
-  text-align: center;
-  padding: 1.5em 1em;
-  margin-top: 2em;
-}
-
-footer a { color: #88b552; text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-container { flex-direction: column; }
-  .hero-text, .hero-logo { max-width: 90%; text-align: center; position: static; margin-top: 1em; }
-}
-
-@media (max-width: 600px) {
-  nav a { display: block; margin: 0.4em 0; }
-  .box { margin: 1em; padding: 1em; }
-  .hero-text h1 { font-size: 2em; }
-}
+</body>
+</html>
