@@ -15,54 +15,47 @@ p, li, a {
   font-size: 1rem;
 }
 
-/* ===== HEADER ===== */
+/* ======== Header ======== */
 header {
-  background-color: #88b552; /* Logo-Grün */
-  color: #000000;
+  background: #88b552; /* grün aus deinem Logo */
+  color: #000000; /* schwarzer Text */
+  text-align: center;
+  padding: 2em 1em;
+  position: relative;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1em;
-}
-
-.header-text {
-  text-align: left;
+header .logo {
+  max-width: 150px; /* passt ins Layout */
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5em auto;
 }
 
 header h1 {
-  color: #000000; /* Schwarz */
-  margin: 0;
   font-size: 2.2em;
+  color: #000000; /* schwarz aus Logo */
+  margin: 0.3em 0 0.2em 0;
 }
 
 header h2 {
-  color: #4f4c4c; /* Grau */
-  margin: 0.2em 0 0.8em 0;
+  font-size: 1.2em;
+  color: #4f4c4c; /* grau aus Logo */
   font-weight: 400;
-}
-
-.header-logo .logo {
-  max-width: 150px;
-  height: auto;
+  margin: 0 0 1em 0;
 }
 
 /* Navigation */
 nav a {
-  color: #000000;
+  color: #000000; /* schwarz */
   text-decoration: none;
-  margin-right: 1em;
+  margin: 0 1em;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #4f4c4c;
+  color: #4f4c4c; /* grau als Hover */
 }
+
 
 /* ===== MAIN / SECTIONS ===== */
 main {
