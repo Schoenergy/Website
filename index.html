@@ -1,75 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SchoEnergy UG</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SchoEnergy Energieberatung</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Meine statische Website mit Kontaktformular">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="logo"><a href="/">Mein Name</a></h1>
-      <nav class="nav">
-        <a href="#about">Über mich</a>
-        <a href="#bilder">Bilder</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </div>
+
+  <header>
+    <h1>SchoEnergy</h1>
+    <nav>
+      <a href="#ueber">Über mich</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <section id="about" class="hero">
-      <h2>Willkommen</h2>
-      <p>Wir sind die SchoEnergy Energieberatung. Ihr Energieeffizenz-Experte aus dem Sauerland.</p>
+  <main>
+    <section id="ueber">
+      <h2>Über mich</h2>
+      <p>SchoEnergy Energieberatung - Ihr Energieeffizenz-Experte aus dem Sauerland.</p>
     </section>
 
-    <section id="bilder">
-      <h2>Galerie</h2>
-      <div class="galerie">
-        <img src="bilder/foto1.jpg" alt="Foto 1">
-        <img src="bilder/foto2.jpg" alt="Foto 2">
-        <img src="bilder/foto3.jpg" alt="Foto 3">
-      </div>
+    <section id="leistungen">
+      <h2>Leistungen</h2>
+      <ul>
+        <li>Energieberatung für Privathaushalte</li>
+        <li>Erstellung von Energieausweisen</li>
+        <li>Wärmebildaufnahmen</li>
+      </ul>
     </section>
 
     <section id="kontakt">
       <h2>Kontakt</h2>
-      <!-- Formspree: ersetze YOUR_FORM_ID -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form">
-        <label>
-          Name
-          <input type="text" name="name" required>
-        </label>
+      <p>Schreib Sie mir gerne eine Nachricht oder rufen Sie mich an:</p>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        
+      <p>E-Mail: <a href="mailto:info@schoenergy.de">info@schoenergy.de</a></p>
+      <p>WhatsApp:<a href="https://wa.me/491605724496" target="_blank">WhatsApp-Nachricht senden</a><p>
+      <p>Telefon:<a href="tel:+491605724496">+49 160 5724496</a><p>
 
-        <label>
-          E-Mail
-          <input type="email" name="_replyto" required>
-        </label>
-
-        <label>
-          Nachricht
-          <textarea name="message" rows="6" required></textarea>
-        </label>
-
-        <!-- Optional: Honeypot zur Spamreduktion -->
-        <input type="text" name="_gotcha" style="display:none">
-
-        <button type="submit">Absenden</button>
-      </form>
-      <p class="form-hint">Du erhältst nach Versand eine Bestätigung an deine E-Mail.</p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> DEIN NAME — <a href="/CNAME">Domain</a></p>
-    </div>
+  <footer>
+    <p>&copy; 2025 Schoenergy</p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
