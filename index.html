@@ -4,38 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SchoEnergy Energieberatung</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Font Awesome für Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-  <div class="header-container">
-    <div class="header-text">
-      <h1>SchoEnergy</h1>
-      <h2>Ihr Energieeffizienz-Experte aus dem Sauerland</h2>
-      <nav>
-        <a href="#ueber">Über mich</a>
-        <a href="#leistungen">Leistungen</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </nav>
+  <!-- HEADER / HERO -->
+  <header>
+    <div class="hero-overlay">
+      <div class="header-container">
+        <div class="header-text">
+          <h1>SchoEnergy</h1>
+          <h2>Ihr Energieeffizienz-Experte aus dem Sauerland</h2>
+          <nav>
+            <a href="#ueber">Über mich</a>
+            <a href="#leistungen">Leistungen</a>
+            <a href="#kontakt">Kontakt</a>
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+          </nav>
+          <div class="hero-buttons">
+            <a href="#kontakt" class="btn">Kontakt aufnehmen</a>
+            <a href="#leistungen" class="btn btn-outline">Leistungen</a>
+          </div>
+        </div>
+        <div class="header-logo">
+          <img src="bilder/logo.svg" alt="SchoEnergy Logo" class="logo">
+        </div>
+      </div>
     </div>
-    <div class="header-logo">
-      <img src="bilder/logo.svg" alt="SchoEnergy Logo" class="logo">
-    </div>
-  </div>
-</header>
+  </header>
 
-
+  <!-- MAIN -->
   <main>
+    <!-- ÜBER MICH -->
     <section id="ueber">
       <h2>Über mich</h2>
-      <p>SchoEnergy Energieberatung - Ihr Energieeffizenz-Experte aus dem Sauerland.</p>
+      <p>SchoEnergy Energieberatung – Ihr Energieeffizienz-Experte aus dem Sauerland. Ich unterstütze Sie bei allen Fragen rund um Energieeinsparung, Energieausweise und nachhaltige Gebäudetechnik.</p>
     </section>
 
+    <!-- LEISTUNGEN -->
     <section id="leistungen">
       <h2>Leistungen</h2>
       <ul>
@@ -45,22 +57,44 @@
       </ul>
     </section>
 
+    <!-- KONTAKT -->
     <section id="kontakt">
       <h2>Kontakt</h2>
-      <p>Schreib Sie mir gerne eine Nachricht oder rufen Sie mich an:</p>
+      <p>Schreib mir gerne eine Nachricht oder rufe mich direkt an:</p>
+
+      <ul class="kontakt-links">
+        <li>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:info@schoenergy.de">info@schoenergy.de</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-whatsapp"></i>
+          <a href="https://wa.me/491605724496" target="_blank">WhatsApp-Nachricht senden</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+491605724496">+49 160 5724496</a>
+        </li>
+      </ul>
+
       <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" required>
 
-</ul>
+        <label>E-Mail:</label>
+        <input type="email" name="email" required>
 
-      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@schoenergy.de">info@schoenergy.de</a></p>
-      <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/491605724496" target="_blank">WhatsApp-Nachricht senden</a><p>
-      <p><i class="fa-solid fa-phone"></i> <a href="tel:+491605724496">+49 160 5724496</a><p>
+        <label>Nachricht:</label>
+        <textarea name="message" rows="5" required></textarea>
 
+        <button type="submit">Senden</button>
+      </form>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Schoenergy</p>
+    <p>&copy; 2025 SchoEnergy</p>
     <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
 
