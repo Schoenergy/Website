@@ -1,3 +1,4 @@
+/* ===== Allgemeines ===== */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #000000;
@@ -9,7 +10,7 @@ body {
 h1, h2 { margin-bottom: 0.4em; }
 p, li, a { font-size: 1rem; }
 
-/* Navigation */
+/* ===== Navigation ===== */
 nav {
   background-color: #88b552;
   text-align: center;
@@ -26,10 +27,10 @@ nav a {
 
 nav a:hover { color: #4f4c4c; }
 
-/* Header / Hero */
+/* ===== Header / Hero ===== */
 header {
   background-color: #88b552;
-  padding: 2em 1em;
+  padding: 2em 1em 3em 1em;
   position: relative;
 }
 
@@ -39,33 +40,31 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2em;
-  flex-wrap: wrap;
   position: relative;
 }
 
 .hero-text {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255,255,255,0.95);
   padding: 1.5em 2em;
   border-radius: 12px;
   text-align: center;
   max-width: 600px;
-  position: relative;
   z-index: 1;
 }
 
 .hero-text h1 { color: #000000; font-size: 2.2em; margin-bottom: 0.3em; }
 .hero-text h2 { color: #4f4c4c; font-weight: 400; font-size: 1.2em; }
 
+/* Logo rechts „schwebend“ */
 .hero-logo img {
   max-width: 120px;
   height: auto;
   position: absolute;
-  top: 20px;
+  top: -20px;
   right: 20px;
 }
 
-/* Main-Bereiche als Kästchen */
+/* ===== Main-Bereiche als Kästchen ===== */
 .box {
   max-width: 800px;
   margin: 2em auto;
@@ -86,11 +85,9 @@ ul li { margin-bottom: 0.5em; }
 /* Kontaktbereich */
 #kontakt p, #kontakt a { font-size: 1.05rem; }
 #kontakt i { margin-right: 8px; vertical-align: middle; }
-
 #kontakt i.fa-envelope { color: #000000; }
 #kontakt i.fa-phone { color: #4f4c4c; }
 #kontakt i.fa-whatsapp { color: #88b552; }
-
 #kontakt a { color: inherit; text-decoration: none; }
 #kontakt a:hover { text-decoration: underline; }
 
@@ -106,7 +103,7 @@ footer {
 footer a { color: #88b552; text-decoration: none; }
 footer a:hover { text-decoration: underline; }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .hero-container { flex-direction: column; }
   .hero-text, .hero-logo { max-width: 90%; text-align: center; position: static; margin-top: 1em; }
