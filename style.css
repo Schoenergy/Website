@@ -1,42 +1,40 @@
-:root{
-  --bg: #f7f8fb;
-  --card: #ffffff;
-  --accent: #2563eb;
-  --text: #111827;
-  --muted: #6b7280;
-  --radius: 10px;
+
+header {
+  background: #88b552; 
+  color: #000000; 
+  text-align: center;
+  padding: 2em 1em;
+  position: relative;
 }
 
-*{box-sizing:border-box}
-body{
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5;
+header .logo {
+  max-width: 150px; 
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5em auto;
 }
 
-.container{max-width:980px;margin:0 auto;padding:28px;}
+header h1 {
+  font-size: 2.2em;
+  color: #000000; 
+  margin: 0.3em 0 0.2em 0;
+}
 
-.site-header{background:var(--card);box-shadow:0 1px 6px rgba(15,23,42,0.06);}
-.site-header .container{display:flex;align-items:center;justify-content:space-between;}
-.logo a{text-decoration:none;color:var(--accent);font-weight:700;font-size:1.25rem;}
-.nav a{margin-left:14px;color:var(--muted);text-decoration:none;}
-.nav a:hover{color:var(--accent)}
+header h2 {
+  font-size: 1.2em;
+  color: #4f4c4c; 
+  font-weight: 400;
+  margin: 0 0 1em 0;
+}
 
-.hero{padding:36px 0;}
-.hero h2{margin:0 0 10px 0;font-size:1.6rem;color:var(--accent)}
-.galerie{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:12px;}
-.galerie img{width:100%;height:160px;object-fit:cover;border-radius:8px;box-shadow:0 6px 18px rgba(16,24,40,0.06);}
 
-.form{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04);max-width:640px}
-.form label{display:block;margin-bottom:12px;font-size:0.95rem;color:var(--muted)}
-.form input[type="text"],
-.form input[type="email"],
-.form textarea{width:100%;padding:10px;border:1px solid #e6e9ef;border-radius:6px;margin-top:6px;font-size:0.95rem}
-.form button{background:var(--accent);color:white;padding:10px 16px;border:none;border-radius:8px;cursor:pointer;margin-top:6px}
-.form-hint{font-size:0.9rem;color:var(--muted);margin-top:8px}
+nav a {
+  color: #000000; 
+  text-decoration: none;
+  margin: 0 1em;
+  font-weight: 500;
+}
 
-.site-footer{padding:18px 0;text-align:center;color:var(--muted);font-size:0.9rem}
+nav a:hover {
+  color: #4f4c4c; 
+}
