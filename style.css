@@ -1,4 +1,3 @@
-/* ===== Allgemeines ===== */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #000000;
@@ -10,7 +9,7 @@ body {
 h1, h2 { margin-bottom: 0.4em; }
 p, li, a { font-size: 1rem; }
 
-/* ===== Navigation ===== */
+/* Navigation */
 nav {
   background-color: #88b552;
   text-align: center;
@@ -27,10 +26,11 @@ nav a {
 
 nav a:hover { color: #4f4c4c; }
 
-/* ===== Header / Hero ===== */
+/* Header / Hero */
 header {
   background-color: #88b552;
   padding: 2em 1em;
+  position: relative;
 }
 
 .hero-container {
@@ -41,6 +41,7 @@ header {
   justify-content: center;
   gap: 2em;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .hero-text {
@@ -49,27 +50,30 @@ header {
   border-radius: 12px;
   text-align: center;
   max-width: 600px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text h1 { color: #000000; font-size: 2.2em; margin-bottom: 0.3em; }
 .hero-text h2 { color: #4f4c4c; font-weight: 400; font-size: 1.2em; }
 
 .hero-logo img {
-  max-width: 150px;
+  max-width: 120px;
   height: auto;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
-/* ===== Main / Sections ===== */
-main {
+/* Main-Bereiche als Kästchen */
+.box {
   max-width: 800px;
   margin: 2em auto;
-  padding: 0 1em;
+  padding: 1.5em 2em;
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
-section { margin-bottom: 2em; }
 
 section h2 {
   border-bottom: 2px solid #88b552;
@@ -79,7 +83,7 @@ section h2 {
 ul { padding-left: 1.2em; }
 ul li { margin-bottom: 0.5em; }
 
-/* ===== Kontaktbereich ===== */
+/* Kontaktbereich */
 #kontakt p, #kontakt a { font-size: 1.05rem; }
 #kontakt i { margin-right: 8px; vertical-align: middle; }
 
@@ -90,7 +94,7 @@ ul li { margin-bottom: 0.5em; }
 #kontakt a { color: inherit; text-decoration: none; }
 #kontakt a:hover { text-decoration: underline; }
 
-/* ===== Footer ===== */
+/* Footer */
 footer {
   background-color: #4f4c4c;
   color: white;
@@ -102,14 +106,14 @@ footer {
 footer a { color: #88b552; text-decoration: none; }
 footer a:hover { text-decoration: underline; }
 
-/* ===== Responsive ===== */
+/* Responsive */
 @media (max-width: 768px) {
   .hero-container { flex-direction: column; }
-  .hero-text, .hero-logo { max-width: 90%; text-align: center; }
+  .hero-text, .hero-logo { max-width: 90%; text-align: center; position: static; margin-top: 1em; }
 }
 
 @media (max-width: 600px) {
   nav a { display: block; margin: 0.4em 0; }
-  main { margin: 1em; padding: 1em; }
+  .box { margin: 1em; padding: 1em; }
   .hero-text h1 { font-size: 2em; }
 }
