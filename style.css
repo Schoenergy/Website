@@ -1,33 +1,4 @@
-/* ===== Allgemeines ===== */
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #000000;
-  background-color: #f8f9fa;
-  margin: 0;
-  line-height: 1.6;
-}
-
-h1, h2 { margin-bottom: 0.4em; }
-p, li, a { font-size: 1rem; }
-
-/* ===== Navigation ===== */
-nav {
-  background-color: #88b552;
-  text-align: center;
-  padding: 1em 0;
-}
-
-nav a {
-  color: #000000;
-  text-decoration: none;
-  margin: 0 1em;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav a:hover { color: #4f4c4c; }
-
-/* ===== Header / Hero ===== */
+/* Header / Hero */
 header {
   background-color: #88b552;
   padding: 2em 1em 3em 1em;
@@ -45,24 +16,21 @@ header {
   flex-wrap: nowrap; /* Desktop nebeneinander */
 }
 
-/* Hero-Text-Kasten */
-.hero-text {
-  background-color: rgba(255,255,255,0.95);
-  padding: 1.5em 2em;
-  border-radius: 12px;
-  text-align: center;
-  max-width: 600px;
-  flex: 1; /* Hero-Text nimmt Platz ein */
-  z-index: 1;
-}
-
+/* Hero-Text ohne weißen Kasten */
 .hero-text h1 { color: #000000; font-size: 2.2em; margin-bottom: 0.3em; }
 .hero-text h2 { color: #4f4c4c; font-weight: 400; font-size: 1.2em; }
 
-/* Logo rechts „schwebend“ */
+/* Logo in weißem Kasten rechts oben */
 .hero-logo {
   flex: 0 0 auto;
   margin-left: 20px;
+}
+
+.logo-box {
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 12px;
+  display: inline-block;
 }
 
 .hero-logo img {
@@ -71,62 +39,14 @@ header {
   display: block;
 }
 
-/* ===== Main-Bereiche als Kästchen ===== */
-.box {
-  max-width: 800px;
-  margin: 2em auto;
-  padding: 1.5em 2em;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-section h2 {
-  border-bottom: 2px solid #88b552;
-  padding-bottom: 0.3em;
-}
-
-ul { padding-left: 1.2em; }
-ul li { margin-bottom: 0.5em; }
-
-/* Kontaktbereich */
-#kontakt p, #kontakt a { font-size: 1.05rem; }
-#kontakt i { margin-right: 8px; vertical-align: middle; }
-#kontakt i.fa-envelope { color: #000000; }
-#kontakt i.fa-phone { color: #4f4c4c; }
-#kontakt i.fa-whatsapp { color: #88b552; }
-#kontakt a { color: inherit; text-decoration: none; }
-#kontakt a:hover { text-decoration: underline; }
-
-/* Footer */
-footer {
-  background-color: #4f4c4c;
-  color: white;
-  text-align: center;
-  padding: 1.5em 1em;
-  margin-top: 2em;
-}
-
-footer a { color: #88b552; text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-
-/* ===== Responsive ===== */
+/* Responsive */
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column; /* Text über Logo */
+    flex-direction: column;
     align-items: center;
   }
   .hero-logo {
     margin-left: 0;
     margin-top: 1em;
   }
-  .hero-text {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 600px) {
-  nav a { display: block; margin: 0.4em 0; }
-  .box { margin: 1em; padding: 1em; }
-  .hero-text h1 { font-size: 2em; }
 }
